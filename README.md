@@ -1,6 +1,6 @@
 <div align="center" markdown>
 
-# PROJECT_NAME
+# PROJECT_NAE
 
 **SHORT_DESCRIPTION**
 
