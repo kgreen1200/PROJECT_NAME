@@ -11,7 +11,7 @@ jobs:
     name: 🧹 Clean Up Stale Issues and PRs
     runs-on: ubuntu-latest
     steps:
-      - name: 🍞 Run Stale Issues and PR Updates
+      - name: 🍞Update Stale Issues and Pull Requests
         uses: actions/stale@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
