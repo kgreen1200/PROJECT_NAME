@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🍞Update Stale Issues and Pull Requests
-        uses: actions/stale@v3
+        uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          days-before-stale: 30
+          days-before-stale: 60
           days-before-close: 7
           remove-stale-when-updated: true
           stale-issue-label: "status: stale"
@@ -26,6 +26,9 @@ jobs:
 
             Please make sure to update to the latest version and check if that solves the issue. Let us know if that works for you by
             leaving a 👍. Thank you for your contributions!
+          close-issue-message: >
+            This issue has been closed and locked due to the lack of activity. If you encounter this same issue, pleae open a new issue and
+            refer to this closed one. Thank you!
           stale-pr-label: "status: stale"
           exempt-pr-labels: "status: no-stale"
           stale-pr-message: >
@@ -33,3 +36,9 @@ jobs:
             stale. This PR will be closed and locked in 7 days if no further activity occurs.
 
             Thank you for your contributions!
+          close-pr-message: >
+            This pull request has been closed and locked due to a lack of activity.
+
+            If you would like to build on this closed PR, you can clone it using this method: https://stackoverflow.com/a/14969986
+
+            Then open a new PR, referencing this closed PR in your message.
